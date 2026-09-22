@@ -40,3 +40,5 @@ jobs:
               --title "Fallout 4 PS4 Save Editor PipBoy Edition v4.1" \
               --notes "v4.1: linked Level + XP fixes, persistent player health/AP/carry editing, 999,999,999 health and carry presets, companion carry support, SPECIAL/perks, inventory, weapons/legendary editing, Best Gear, quests, validation and backups."
           fi
+
+# Trigger v4.1 release
