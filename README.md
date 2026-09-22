@@ -10,6 +10,7 @@ This repository is intentionally clean and contains only:
 ## Features
 
 - Player name, Level, XP, HP, AP and Carry Weight editing.
+- One-click **UNLIMITED CARRY** preset (10,000,000 capacity) for heavily loaded saves.
 - SPECIAL editing and the 70 vanilla SPECIAL perk groups.
 - Real inventory quantity editing.
 - Category-specific add buttons for Weapons, Apparel, Aid, Misc, Junk, Mods and Ammo.
@@ -27,8 +28,9 @@ This repository is intentionally clean and contains only:
 2. Optional but recommended for image previews: `py -m pip install Pillow`.
 3. Double-click `Fallout_4_PS4_Save_Editor_PipBoy_Edition.pyw`.
 4. Open a **decrypted** PS4 `SAVEDATA.DAT`.
-5. Make edits, use **VALIDATE**, then **SAVE EDITED**.
-6. Re-sign/re-encrypt the edited save with your normal PS4 save tool before importing it to the console.
+5. For effectively unlimited inventory capacity, open **STAT > STATUS** and press **UNLIMITED CARRY**.
+6. Make edits, use **VALIDATE**, then **SAVE EDITED**.
+7. Re-sign/re-encrypt the edited save with your normal PS4 save tool before importing it to the console.
 
 The single `.pyw` file extracts its embedded runtime to a versioned local cache automatically. No source folders, item database files, assets, test folders or build scripts need to sit beside the editor.
 
