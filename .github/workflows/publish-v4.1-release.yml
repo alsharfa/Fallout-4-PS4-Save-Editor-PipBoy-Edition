@@ -1,0 +1,42 @@
+name: Publish v4.1 Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/publish-v4.1-release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build release ZIP
+        shell: bash
+        run: |
+          zip -9 "Fallout_4_PS4_Save_Editor_PipBoy_Edition_v4.1.zip" \
+            "Fallout_4_PS4_Save_Editor_PipBoy_Edition.pyw" \
+            "README.md" \
+            "THIRD_PARTY_NOTICES.md"
+
+      - name: Publish GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ASSET="Fallout_4_PS4_Save_Editor_PipBoy_Edition_v4.1.zip"
+          if gh release view "v4.1" >/dev/null 2>&1; then
+            gh release upload "v4.1" "$ASSET" --clobber
+          else
+            gh release create "v4.1" "$ASSET" \
+              --target "$GITHUB_SHA" \
+              --title "Fallout 4 PS4 Save Editor PipBoy Edition v4.1" \
+              --notes "v4.1: linked Level + XP fixes, persistent player health/AP/carry editing, 999,999,999 health and carry presets, companion carry support, SPECIAL/perks, inventory, weapons/legendary editing, Best Gear, quests, validation and backups."
+          fi
