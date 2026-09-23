@@ -1,14 +1,22 @@
-# Fallout 4 PS4 Save Editor PipBoy Edition
+# Fallout 4 PS4 Save Editor
+
+## Current version
+
+**v4.7.1**
+
+The v4.7.1 package is included in this repository as `Fallout_4_PS4_Save_Editor_v4.7.1.zip`.
 
 ## Features
 
 - Player name editing.
 - Linked **Level + XP** editing with automatic progression synchronization.
 - Persistent **Player Health** editing.
-- One-click **Unlimited Player Health** preset: `999,999,999`.
+- **Max Health** save-field preset.
+- **Rapid Health Regen** save-field preset.
 - Persistent **Player AP** editing.
 - Persistent **Player Carry Weight** editing.
-- One-click **Unlimited Player Carry** preset: `999,999,999`.
+- **Max Carry Weight** save-field preset using the verified save-code location.
+- **Fusion Core** quantity preset.
 - Companion detection.
 - Companion carry-weight overrides.
 - SPECIAL stat editing.
@@ -28,3 +36,11 @@
 - Pending-change review.
 - Structural save validation.
 - Automatic backups.
+
+## v4.7.1 fixes
+
+- Renamed the application to **Fallout 4 PS4 Save Editor**.
+- Corrected Health, Health Regen and Carry Weight save-field handling to use the supplied save-code search locations.
+- Corrected post-write verification so it validates the same fields that are modified.
+- Cleaned up labels and removed obsolete PipBoy Edition / Exact Save Code wording.
+- Improved the default editor window sizing and UI text.
