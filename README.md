@@ -2,7 +2,25 @@
 
 ## Current version
 
-**v4.7.8**
+**v4.9.4 — Power Armor / Settler Inventory Bugfix**
+
+Latest release package:
+
+[Download Fallout_4_PS4_Save_Editor_v4.9.4.zip](https://github.com/alsharfa/Fallout-4-PS4-Save-Editor-PipBoy-Edition/releases/download/v4.9.4/Fallout_4_PS4_Save_Editor_v4.9.4.zip)
+
+## v4.9.4 bug fixes
+
+- Fixed **Power Armor Condition %** edits so they are saved correctly even when condition is the only pending edit.
+- Power Armor condition changes now participate in **Undo / Redo / Discard Pending**.
+- Power Armor condition changes now appear in the pending-change review before saving.
+- Fixed pending-state tracking for **Settler Inventory** add, remove and copy operations.
+- Settler inventory changes now participate correctly in **Undo / Redo / Discard Pending**.
+- Settler inventory changes now appear in the pending-change review.
+- Individual settler/NPC inventories remain isolated: additions and removals apply only to the selected settler.
+- Right-click settler inventory supports **Remove Item from Settler**.
+- Right-click settler list supports **Copy All Inventory** and **Paste Inventory to This Settler** while leaving the source settler unchanged.
+- Power Armor details include verified frame-installed torso detection, condition display/editing, installed mods and supported maximum lining workflows.
+- Unsupported Power Armor stat/OMOD combinations are not guessed or written.
 
 ## Features
 
@@ -12,12 +30,14 @@
 - **Max Health**, **Rapid Health Regen**, and **Max Carry Weight** save-field presets.
 - **Fusion Core** quantity preset.
 - Companion detection and carry-weight overrides.
+- Individual **Settler / NPC Inventory** editing with per-settler add/remove and full-inventory copy/paste.
 - SPECIAL stat editing and all 70 vanilla SPECIAL perk groups.
 - Real inventory quantity editing.
 - Add items from the built-in database with a selectable amount.
-- Database categories for Weapons, Apparel, Power Armor, Aid, Misc, Junk, Mods and Ammo.
+- Database categories for Weapons, Apparel, Power Armor, Aid, Misc, Junk, Keys, Mods and Ammo.
 - Expanded apparel database support, including armor, clothing, outfits, headwear and other wearable ARMO records.
 - Power Armor database support, including Hellfire and X-02 records when their required plugins are present.
+- **Power Armor Details** with torso detection, condition editing and supported maximum lining operations.
 - One-click **BEST NON-POWER ARMOR** preset with an Amount field.
 - Far Harbor-aware Marine Armor preset with Heavy Combat Armor fallback.
 - Right-click **Copy / Paste / Select All** support for editable fields.
@@ -36,7 +56,17 @@
 - Verified quest stage and objective editing.
 - Undo / Redo, pending-change review, structural save validation, and automatic backups.
 
-## v4.7.8 changes
+## Safety / save handling
+
+- The editor queues supported edits before writing.
+- Use **SAVE EDITED** to commit pending changes.
+- Structural validation is performed before the edited save is accepted.
+- Automatic backups are retained.
+- The editor avoids guessing unsupported record layouts or Power Armor modifications.
+
+## Older changes
+
+### v4.7.8
 
 - Added a dedicated **KEYS** inventory category.
 - Added **ADD ALL JUNK** with a configurable Amount field.
@@ -46,51 +76,49 @@
 - Bulk Add All operations only insert missing items instead of overwriting existing stacks.
 - DLC/plugin validation and duplicate-safe inventory handling remain enabled.
 
-## v4.7.7 fixes
+### v4.7.7
 
 - Replaced the ambiguous unsaved-edits Yes/No prompt with explicit **Save / Discard / Cancel** behavior.
-- Cancel now keeps the current editor session open.
+- Cancel keeps the current editor session open.
 - Save must complete successfully before the editor continues with the pending action.
 - Renamed **UNLIMITED ALL DETECTED** to **UNLIMITED ALL VERIFIED** for companion carry editing.
 - Companion actor-value tables that are not verified are explicitly skipped/read-only.
-- Companion carry operations now report how many verified companions were modified and how many were skipped.
 
-## v4.7.6 changes
+### v4.7.6
 
 - Added the improved **Armor & Weapon Upgrades** interface.
-- Added human-readable upgrade categories instead of requiring users to work directly with raw OMOD records.
+- Added human-readable upgrade categories instead of requiring raw OMOD records.
 - Added Legendary / Armor / Weapon upgrade filtering.
 - Added suggested-for-current-item filtering.
 - Added clearer Add Selected Upgrade and Replace Slot workflows.
-- Retains the v4.7.5 Best Non-Power Armor preset and expanded v4.7.4 apparel database.
 
-## v4.7.5 changes
+### v4.7.5
 
 - Added one-click **BEST NON-POWER ARMOR**.
 - Added an **Amount** field controlling how many copies of each applicable piece are queued.
 - Uses a Marine Armor loadout when Far Harbor is available.
 - Falls back to Heavy Combat Armor when Far Harbor is unavailable.
 
-## v4.7.4 changes
+### v4.7.4
 
 - Expanded the apparel picker to expose all ARMO records available in the editor item database.
 - Includes supported vanilla, DLC and available Creation Club apparel records.
 
-## v4.7.3 changes
+### v4.7.3
 
 - Added a dedicated **POWER ARMOR** database category.
 - Added Hellfire and X-02 power-armor records with plugin-presence checks.
 
-## v4.7.2 changes
+### v4.7.2
 
 - Added right-click clipboard menus to editable fields.
 - Added right-click row copying in inventory/table views.
 - Improved the item database picker with user-selectable quantities.
 - Added double-click and Enter-key shortcuts for adding database items.
 
-## v4.7.1 fixes
+### v4.7.1
 
 - Renamed the application to **Fallout 4 PS4 Save Editor**.
-- Corrected Health, Health Regen and Carry Weight save-field handling to use the supplied save-code search locations.
+- Corrected Health, Health Regen and Carry Weight save-field handling.
 - Corrected post-write verification so it validates the same fields that are modified.
 - Improved the default editor window sizing and UI text.
