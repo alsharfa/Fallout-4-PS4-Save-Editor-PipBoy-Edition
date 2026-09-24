@@ -2,7 +2,7 @@
 
 ## Current version
 
-**v4.7.6**
+**v4.7.7**
 
 ## Features
 
@@ -35,6 +35,15 @@
 - Stored statistics and global workshop statistics editing.
 - Verified quest stage and objective editing.
 - Undo / Redo, pending-change review, structural save validation, and automatic backups.
+
+## v4.7.7 fixes
+
+- Replaced the ambiguous unsaved-edits Yes/No prompt with explicit **Save / Discard / Cancel** behavior.
+- Cancel now keeps the current editor session open.
+- Save must complete successfully before the editor continues with the pending action.
+- Renamed **UNLIMITED ALL DETECTED** to **UNLIMITED ALL VERIFIED** for companion carry editing.
+- Companion actor-value tables that are not verified are explicitly skipped/read-only.
+- Companion carry operations now report how many verified companions were modified and how many were skipped.
 
 ## v4.7.6 changes
 
