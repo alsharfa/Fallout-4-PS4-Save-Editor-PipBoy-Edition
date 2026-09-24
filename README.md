@@ -2,7 +2,7 @@
 
 ## Current version
 
-**v4.7.7**
+**v4.7.8**
 
 ## Features
 
@@ -35,6 +35,16 @@
 - Stored statistics and global workshop statistics editing.
 - Verified quest stage and objective editing.
 - Undo / Redo, pending-change review, structural save validation, and automatic backups.
+
+## v4.7.8 changes
+
+- Added a dedicated **KEYS** inventory category.
+- Added **ADD ALL JUNK** with a configurable Amount field.
+- Added **SET EXISTING JUNK** to set the quantity of junk already present.
+- Added **ADD ALL KEYS** with a configurable Amount field.
+- Added **SET EXISTING KEYS** to set the quantity of keys already present.
+- Bulk Add All operations only insert missing items instead of overwriting existing stacks.
+- DLC/plugin validation and duplicate-safe inventory handling remain enabled.
 
 ## v4.7.7 fixes
 
