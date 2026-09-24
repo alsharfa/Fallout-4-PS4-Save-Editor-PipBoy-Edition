@@ -2,9 +2,9 @@
 
 ## Current version
 
-**v4.7.1**
+**v4.7.2**
 
-The v4.7.1 package is included in this repository as `Fallout_4_PS4_Save_Editor_v4.7.1.zip`.
+The v4.7.2 editor adds improved clipboard controls and database-driven item adding with selectable quantities.
 
 ## Features
 
@@ -22,7 +22,12 @@ The v4.7.1 package is included in this repository as `Fallout_4_PS4_Save_Editor_
 - SPECIAL stat editing.
 - All 70 vanilla SPECIAL perk groups.
 - Real inventory quantity editing.
-- Add items by category: Weapons, Apparel, Aid, Misc, Junk, Mods and Ammo.
+- Add items from the built-in item database by category: Weapons, Apparel, Aid, Misc, Junk, Mods and Ammo.
+- Select an item and enter the exact amount to add.
+- Right-click **Copy / Paste / Select All** support for editable text and number fields.
+- Right-click **Copy Row** support for inventory/table rows.
+- Double-click database items to add them.
+- Press **Enter** in the database amount field to add the selected item.
 - Weapon add, change and remove workflow by name.
 - Weapon OMOD editing.
 - Apparel OMOD editing.
@@ -36,6 +41,15 @@ The v4.7.1 package is included in this repository as `Fallout_4_PS4_Save_Editor_
 - Pending-change review.
 - Structural save validation.
 - Automatic backups.
+
+## v4.7.2 changes
+
+- Added right-click clipboard menus to editable fields.
+- Added right-click row copying in inventory/table views.
+- Improved the item database picker for adding items.
+- Added a user-selectable quantity field when adding an item from the database.
+- Added double-click and Enter-key shortcuts for adding database items.
+- Retained the verified Health, Health Regen and Carry Weight save-field handling from v4.7.1.
 
 ## v4.7.1 fixes
 
